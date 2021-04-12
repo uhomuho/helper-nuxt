@@ -1,0 +1,20 @@
+.aside {
+	@include _flex(flex-start, flex-start, column);
+	height: 100%;
+	background: #2e323a;
+	.label {
+		@include _flex(center, flex-start);
+		font-weight: normal;
+		color: #fff;
+		height: 3.5rem;
+		width: 100%;
+		margin-bottom: 0;
+		background: #17191e;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.aside {
+		width: 14rem;
+	}
+}

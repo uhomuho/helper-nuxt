@@ -1,0 +1,9 @@
+.navbar {
+	box-shadow: 0 1px 0 rgb(24 28 33 / 4%);	
+}
+
+@media screen and (min-width: 1024px) {
+	.navbar {
+		padding-left: 14rem;
+	}
+}

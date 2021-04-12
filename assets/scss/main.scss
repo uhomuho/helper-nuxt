@@ -1,0 +1,7 @@
+@import "./bulma";
+
+@media screen and (min-width: 1408px) {
+	html { 
+		font-size: calc(#{ $body-size } + 2px)!important; 
+	}
+}

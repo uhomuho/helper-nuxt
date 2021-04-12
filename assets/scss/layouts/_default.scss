@@ -1,0 +1,41 @@
+html {
+	background-color: #f8f8f8!important;
+}
+#panel {
+	* {
+		font-family: "Nunito", sans-serif;
+	}
+	#header {
+		z-index: 1;
+		#contacts_search {
+			.input {
+				box-shadow: unset;
+				border: unset;
+			}
+		}
+	}
+	main {
+		padding-top: 3.5rem;
+		#aside {
+			height: 100vh;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+		#main {
+			padding-left: 14rem;
+			#top_line {
+				padding: 1.5rem;
+				margin-top: 4rem;
+				background-color: $white;
+				border-top: 1px solid rgba(24, 28, 33, 0.06);
+				border-bottom: 1px solid rgba(24, 28, 33, 0.06);
+				h1 {
+					font-size: 2rem;
+					font-weight: 700;
+				}
+			}
+		}
+	}	
+}

@@ -1,0 +1,38 @@
+@import "~bulma/sass/utilities/_all";
+
+$primary: #00d1b2;
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+$custom-colors: null !default;
+
+$colors: mergeColorMaps(
+	(
+		"white": ( $white, $black ),
+		"black": ( $black, $white ),
+		"light": ( $light, $light-invert ),
+		"dark": ( $dark, $dark-invert ),
+		"primary": ( $primary, $primary-invert, $primary-light, $primary-dark ),
+		"link": ( $link, $link-invert, $link-light, $link-dark ),
+		"info": ( $info, $info-invert, $info-light, $info-dark ),
+		"success": ( $success, $success-invert, $success-light, $success-dark ),
+		"warning": ( $warning, $warning-invert, $warning-light, $warning-dark ),
+		"danger": ( $danger, $danger-invert, $danger-light, $danger-dark ),
+	),
+	$custom-colors
+);
+
+@keyframes breathing {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
