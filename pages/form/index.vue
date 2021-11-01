@@ -21,7 +21,7 @@
 		b-table-column( field="phone" :label='$t("form.phone")' v-slot='props' )
 			a( :href='`tel:${props.row.phone}`') {{ props.row.phone }}
 		b-table-column( field="email" :label='$t("form.email")' v-slot='props' ) {{ props.row.email }}
-		b-table-column( field="Bot" :label='$t("form.system")' v-slot='props' ) {{ props.row.bot === 'pzm' ? 'PRIZM' : 'UMI' }}
+		b-table-column( field="Bot" :visible='false' :label='$t("form.system")' v-slot='props' ) {{ props.row.bot === 'pzm' ? 'PRIZM' : 'UMI' }}
 		b-table-column( field="comment" :label='$t("form.comment")' v-slot='props' ) {{ props.row.comment }}
 		b-table-column.is-actions-cell( custom-key="actions" v-slot='props' )
 			.buttons.is-right

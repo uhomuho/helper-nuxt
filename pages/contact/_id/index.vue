@@ -3,6 +3,8 @@
 	tiles
 		ContactCard.tile.is-child( :data='contact' @save='update' :loading='loading' )
 		ContactData.tile.is-child( :data='contact' @save='update' :loading='loading'  )
+	tiles( v-if='contact.answers && Object.keys(contact.answers).length > 0' )
+		ContactAnswers( :answers='contact.answers' )
 </template>
 
 <script>

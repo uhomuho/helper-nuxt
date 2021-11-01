@@ -1,27 +1,25 @@
 import Vue from 'vue'
 import Buefy from 'buefy'
 import VueClipboard from 'vue-clipboard2'
+import VueDragDrop from 'vue-drag-drop'
 
+Vue.use(VueDragDrop)
 Vue.use(Buefy)
 Vue.use(VueClipboard)
 
 import moment from 'moment'
 
-export default ({ i18n, store }, inject) => {
+export default ({ store }, inject) => {
 
 	inject('Snackbar', ( message, duration = 2500, type = 'is-primary', actionText = 'OK', position = 'is-bottom-right' ) => {
-		Vue.prototype.$buefy.snackbar.open({ message, duration, type, actionText, position })
+		Vue.prototype.$buefy.snackbar.open({ message, duration, type, actionText, position, queue: false })
 	})
 
 	inject('_locales', () => {
-		let locales = []
-		for ( let lang of i18n.localeCodes) {
-			locales.push({
-				code: lang,
-				name: lang == "ru" ? "Русский" : lang == "en" ? "English" : ""
-			})
-		}
-		return locales
+		return [
+			{ code: "ru", name: "Русский" },
+			{ code: "en", name: "English" },
+		]
 	})
 
 	inject('groupBy', (xs, key, type = {}) => {

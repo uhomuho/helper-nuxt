@@ -1,0 +1,531 @@
+{
+	"ru": {
+		"roy_club": "РОЙ КЛУБ",
+		"welcome": "Добро пожаловать<br>в <span>РОЙ Клуб!</span>",
+		"make_crypto": "Делаем криптовалюту доступной для всех!",
+		"income_alt": {
+			"umi": "Приумножение криптовалюты до 40% в месяц",
+			"pzm": "Приумножение криптовалюты до 10% в месяц",
+			"all": "Приумножение криптовалюты до 40% в месяц"
+		},
+		"income": {
+			"umi": "До 40% в месяц в криптовалюте",
+			"pzm": "До 10% в месяц в криптовалюте",
+			"all": "До 40% в месяц в криптовалюте"
+		},
+		"learn": "Обучение для участников",
+		"learn_alt": "Бесплатное обучение",
+		"community": "Сообщество",
+		"is_people": "<span>РОЙ Клуб</span> — это люди!",
+		"social_project": "Мы — социальный проект, который объединяет людей с целью обеспечить<br class=`is-hidden-mobile`> достойную жизнь своим семьям, а также помочь другим людям.",
+		"more_than": "Более <span>350 000</span> участников из разных стран мира",
+		"initiative": "Социальные и благотворительные инициативы",
+		"initiative_alt": "Социальные и благотворительные проекты",
+		"office": "Офисы в более чем <span>40 городах</span>",
+		"availability": "Доступность",
+		"is_multi": "РОЙ КЛУБ — ЭТО ПРИУМНОЖЕНИЕ КРИПТОВАЛЮТЫ",
+		"is_multi_alt": "Приумножение криптовалюты не выходя из дома, в любой точке мира.",
+		"stay_home": "Не выходя из дома. В любой точке мира.",
+		"tech": "Технологии",
+		"is_crypto": "<span>РОЙ Клуб</span> — это криптовалюта",
+		"based_on": {
+			"umi": "Основа РОЙ Клуба — криптовалюта UMI. Она даёт возможность получать новые монеты без дорогого оборудования.",
+			"pzm": "Основа РОЙ Клуба — криптовалюта PRIZM. Она даёт возможность получать новые монеты без дорогого оборудования.",
+			"all": "Основа РОЙ Клуба — криптовалюты UMI и PRIZM. Они дают возможность получать новые монеты без дорогого оборудования."
+		},
+		"we_together": "Мы объединились, чтобы получать максимум выгоды от этих монет и сделать криптовалюту доступной.",
+		"free_learn": "Бесплатно обучаем всех участников и даем приумножать криптовалюту и получать бонусы. При этом монеты можно вывести в любой момент, без ограничений!",
+		"free_learn_alt": "Бесплатно обучаем участников и даем возможность улучшить материальное благосостояние. При этом криптовалюту можно вывести в любой момент, без ограничений!",
+		"join": "Присоединиться",
+		"join_alt": "Стать криптоинвестором",
+		"is_opportune": "<span>РОЙ КЛУБ</span> — ЭТО ВОЗМОЖНОСТИ!",
+		"school": "<b>РОЙ Школа и Академия.</b> Программы обучения",
+		"helper": "<b>РОЙ Помощник.</b> Бесплатная воронка продаж",
+		"move": "<b>РОЙ Движение.</b> Обучение командопостроению",
+		"good": "<b>РОЙ Благо.</b> Реальная благотворительность",
+		"auto": "<b>РОЙ Авто.</b> Автомобили для активных участников",
+		"sprint": "<b>РОЙ Спринт.</b> Ежемесячные выплаты за оклейку авто",
+		"market": "<b>РОЙ Маркет.</b> Торговая площадка с товарами и услугами",
+		"contests": "<b>Конкурсы, акции, розыгрыши</b> и многое другое.",
+		"fast_facts": "Коротко о главном",
+		"is_multi_crypto": {
+			"pzm": "РОЙ КЛУБ — ЭТО ПРИУМНОЖЕНИЕ PRIZM",
+			"umi": "РОЙ КЛУБ — ЭТО ПРИУМНОЖЕНИЕ UMI",
+			"all": "РОЙ КЛУБ — ЭТО ПРИУМНОЖЕНИЕ UMI и PRIZM"
+		},
+		"roy_based": {
+			"pzm": "Основа возможностей РОЙ Клуба — применение криптовалюты PRIZM. Она уже давно используется людьми во всем мире и дает возможность получать новые монеты благодаря технологии парамайнинга. Для получения монет не нужен мощный компьютер, а пользоваться криптовалютой очень просто.",
+			"umi": "Основа возможностей РОЙ Клуба — применение криптовалюты UMI. Это инновационный цифровой инструмент, который дает возможность добывать новые монеты без дорогостоящего оборудования. Она торгуется на биржах и активно используется для платежей.",
+			"all": "Основа возможностей РОЙ Клуба — применение криптовалют UMI и PRIZM. Это цифровые инструменты, которые объединяет возможность получать новые монеты без дорогого майнингового оборудования. Каждая монета имеет свои преимущества и особенности."
+		},
+		"compare": {
+			"umi": {
+				"1": {
+					"title": "Приумножение монет",
+					"content": "До <span>40%</span> новых монет в месяц благодаря технологии стейкинга",
+					"icon": "fast_icon"
+				},
+				"2": {
+					"title": "Быстрые переводы без комиссий",
+					"content": "Переводы монет происходят почти моментально, какие-либо комиссии отсутствуют",
+					"icon": "income_icon"
+				},
+				"3": {
+					"title": "Инновации",
+					"content": "Учитывает недостатки существующих криптовалют и устраняет их. Универсальный денежный инструмент",
+					"icon": "innovate_icon"
+				},
+				"4": {
+					"title": "Децентрализованная и безопасная",
+					"content": "Безопасность благодаря технологии блокчейн. Независимость монеты от банков и политики",
+					"icon": "safesecure_icon"
+				},
+				"button": "Приумножать UMI"
+			},
+			"pzm": {
+				"1": {
+					"title": "Приумножение монет",
+					"content": "До <span>10%</span> новых монет в месяц благодаря технологии парамайнинга",
+					"icon": "multiply_icon"
+				},
+				"2": {
+					"title": "Минимальные комиссии",
+					"content": "Комиссии за переводы ниже, чем у многих криптовалют.",
+					"icon": "comfort_icon"
+				},
+				"3": {
+					"title": "Проверенная временем",
+					"content": "Существует более <span>3-х лет</span> и используется людьми по всему миру.",
+					"icon": "trusty_icon"
+				},
+				"4": {
+					"title": "Децентрализованная и безопасная",
+					"content": "Безопасность благодаря технологии блокчейн. Независимость монеты от банков и политики",
+					"icon": "safesecure_icon"
+				},
+				"button": "Приумножать PRIZM"
+			}
+		},
+		"advantages": {
+			"umi": {
+				"1": {
+					"title": "Самая высокая доходность",
+					"content": "До 40% в месяц благодаря генерации новых монет (стейкингу)",
+					"icon": "fast_icon"
+				},
+				"2": {
+					"title": "Безопасная и децентрализованная",
+					"content": "Безопасность благодаря технологии блокчейн. Независимость монеты от банков и политики.",
+					"icon": "safesecure_icon"
+				},
+				"3": {
+					"title": "Выгодная и быстрая",
+					"content": "Переводы без комиссий, в считанные секунды. Отправить монеты не сложнее, чем сообщение в мессенджере.",
+					"icon": "income_icon"
+				},
+				"4": {
+					"title": "Инновационная",
+					"content": "Учитывает все недостатки существующих криптовалют и устраняет их",
+					"icon": "innovate_icon"
+				}
+			},
+			"pzm": {
+				"1": {
+					"title": "Приумножение монет",
+					"content": "До 10% в месяц благодаря совместной добыче новых монет (парамайнингу)",
+					"icon": "multiply_icon"
+				},
+				"2": {
+					"title": "Безопасная и децентрализованная",
+					"content": "Безопасность благодаря технологии блокчейн. Независимость монеты от банков и политики.",
+					"icon": "safesecure_icon"
+				},
+				"3": {
+					"title": "Удобная",
+					"content": "Чтобы получать новые монеты PRIZM, не нужны мощные компьютеры. Быстрые платежи в системе и минимальные комиссии.",
+					"icon": "comfort_icon"
+				},
+				"4": {
+					"title": "Проверенная временем",
+					"content": "Монета существует более 3 лет и используется людьми по всему миру",
+					"icon": "trusty_icon"
+				}
+			}
+		},
+		"join_roy": "Присоединяйтесь к <b>РОЙ Клубу</b> сегодня и создайте лучшее будущее уже завтра!",
+		"hello": "Добро пожаловать!",
+		"my_name": "Меня зовут <b>{0}</b>, и я помогу тебе вступить в РОЙ Клуб!",
+		"to_join": "Чтобы зарегистрироваться в РОЙ Клубе, <b>выберите из иконок социальных сетей</b> наиболее удобный для Вас мессенджер для обратной связи со мной.",
+		"chat_bot": "Если Чат-бот или собеседник вас спросит реф-номер или никнейм, то введите <b>{0}</b> или <b>{1}</b>.",
+		"bot_help": "Чат-бот поможет Вам пройти все сложные и непонятные моменты, а в крайних случаях <b>проинформирует меня лично</b>, если что-то пошло не так.",
+		"form": "Форма обратной связи",
+		"sign_up": "Регистрация",
+		"no_messenger": "Если у вас нет возможности использовать месседжер,",
+		"use_form": "воспользуйтесь формой обратной связи.",
+		"your_name": "Как вас зовут?",
+		"your_email": "Ваш контактный E-mail",
+		"phone_number": "Номер телефона",
+		"comment": "Ваш комментарий",
+		"input_comment": "Введите ваш комментарий",
+		"name_valid": "Разрешены цифры, буквы и символ пробела!",
+		"phone_valid": "Разрешены цифры, знак \"+\", скобки!",
+		"email_valid": "Email введён неверно",
+		"questions": "Если у вас остались вопросы вы можете связаться со мной в одной из этих социальных сетей:",
+		"thanks": "Спасибо за заявку, я свяжусь с вами в ближайшее время!",
+		"send": "Отправить",
+		"rights": "Все права защищены РОЙ Клуб"
+	},
+	"en": {
+		"roy_club": "ROY CLUB",
+		"welcome": "Welcome to<br>the <span>ROY Club!</span>",
+		"make_crypto": "We make cryptocurrency available to everyone!",
+		"income_alt": {
+			"umi": "Grow your cryptocurrency at the rate of up to 40% per month",
+			"pzm": "Grow your cryptocurrency at the rate of up to 10% per month",
+			"all": "Grow your cryptocurrency at the rate of up to 40% per month"
+		},
+		"income": {
+			"umi": "Up to 40% per month in cryptocurrency",
+			"pzm": "Up to 10% per month in cryptocurrency",
+			"all": "Up to 40% per month in cryptocurrency"
+		},
+		"learn": "Training for participants",
+		"learn_alt": "Free training",
+		"community": "Community",
+		"is_people": "<span>ROY Club</span> means people!",
+		"social_project": "We are a social project that unites people who want to make a<br class='is-hidden-mobile'>decent living for their families while also helping others.",
+		"more_than": "Over <span>350 000</span> participants from around the world",
+		"initiative": "Social-oriented and charitable initiatives",
+		"initiative_alt": "Social-oriented and charitable projects",
+		"office": "Offices in more than <span>40 cities</span>",
+		"availability": "Availability",
+		"is_multi": "ROY CLUB MEANS GROWING YOUR CRYPTOCURRENCY",
+		"is_multi_alt": "Growing your cryptocurrency without leaving your home, anywhere in the world.",
+		"stay_home": "Without leaving your home, anywhere in the world.",
+		"tech": "Technologies",
+		"is_crypto": "<span>ROY Club</span> means cryptocurrency",
+		"based_on": {
+			"umi": "In the ROY Club, earnings are based on the UMI cryptocurrency. This is an innovative digital tool which enables people to mine new coins without expensive computing equipment. It is traded on exchanges and is actively used to make payments.",
+			"pzm": "In the ROY Club, earnings are based on the PRIZM cryptocurrency. It's long been used by people worldwide and enables users to generate new coins by using paramining technology. You don't need powerful computers to generate coins. Using cryptocurrency is really easy.",
+			"all": "ROY Club is based on UMI and PRIZM cryptocurrencies. They are digital instruments united by the opportunity to generate new coins without the expensive mining equipment. Each coin has its own features and advantages."
+		},
+		"we_together": "The ROY Club members got united to jointly generate maximum profit from mining PRIZM. All you need to do to profit up to 10% per month is to join the ROY Club.",
+		"free_learn": "We train all participants for free and give them the opportunity to earn even more thanks to the bonus program. Withdraw your investments and profit at any time, with no limitations!",
+		"free_learn_alt": "We train all participants for free and give them the opportunity to earn even more thanks to the bonus program. Withdraw your investments and profit at any time, with no limitations!",
+		"join": "Join",
+		"join_alt": "Become Crypto Investor",
+		"is_opportune": "ROY CLUB MEANS OPPORTUNITIES!",
+		"school": "<b>ROY School and academy</b> and training programs.",
+		"helper": "<b>ROY Assistant.</b> Free sales funnel.",
+		"move": "<b>ROY Movement.</b> Revenue and team building.",
+		"good": "<b>ROY Blago.</b> Real-world charity work.",
+		"auto": "<b>ROY Auto.</b> Cars for active participants.",
+		"sprint": "<b>ROY Sprint.</b> Payments for car wrapping.",
+		"market": "<b>ROY Market.</b> Trading platform with goods and services.",
+		"contests": "<b>Contests, special offers, giveaways</b> and much more.",
+		"fast_facts": "Fast facts",
+		"is_multi_crypto": {
+			"pzm": "ROY CLUB MEANS INCREASE PRIZM",
+			"umi": "ROY CLUB MEANS INCREASE UMI",
+			"all": "ROY CLUB MEANS INCREASE UMI AND PRIZM"
+		},
+		"roy_based": {
+			"pzm": "The basis of the ROY Club's capabilities is the use of PRIZM cryptocurrency. It has been used by people all over the world for a long time and makes it possible to get new coins thanks to paramining technology. You don't need a powerful computer to get coins, and using cryptocurrency is very simple.",
+			"umi": "The basis of the ROY Club's capabilities is the use of the UMI cryptocurrency. This is an innovative digital tool that makes it possible to mine new coins without expensive equipment. It is traded on exchanges and is actively used for payments.",
+			"all": "The basis of the ROY Club's capabilities is the use of UMI and PRIZM cryptocurrencies. These are digital tools that combine the ability to receive new coins without expensive mining equipment. Each coin has its own advantages and characteristics."
+		},
+		"compare": {
+			"umi": {
+				"1": {
+					"title": "Growing coins",
+					"content": "Up to 40 % of new coins per month via staking technology",
+					"icon": "fast_icon"
+				},
+				"2": {
+					"title": "Fast transfers without fees",
+					"content": "Coin transfers are near-instantaneous, with no fees whatsoever",
+					"icon": "income_icon"
+				},
+				"3": {
+					"title": "Innovations",
+					"content": "Takes note of deficiencies of existing cryptocurrencies and rectifies them. Universal Monetary Instrument",
+					"icon": "innovate_icon"
+				},
+				"4": {
+					"title": "Safe and decentralized",
+					"content": "Security ensured by blockchain technology.  Independence from banks and politics.",
+					"icon": "safesecure_icon"
+				},
+				"button": "Grow UMI"
+			},
+			"pzm": {
+				"1": {
+					"title": "Growing coins",
+					"content": "Up to <span>10%</span> of new coins per month via paramining technology",
+					"icon": "multiply_icon"
+				},
+				"2": {
+					"title": "Minimal fees",
+					"content": "Transfer fees are lower than for many cryptocurrencies",
+					"icon": "comfort_icon"
+				},
+				"3": {
+					"title": "Time proven",
+					"content": "Has existed for over <span>3 years</span> and is used by people from all over the world.",
+					"icon": "trusty_icon"
+				},
+				"4": {
+					"title": "Safe and decentralized",
+					"content": "Security ensured by blockchain technology.  Independence from banks and politics.",
+					"icon": "safesecure_icon"
+				},
+				"button": "Grow PRIZM"
+			}
+		},
+		"advantages": {
+			"umi": {
+				"1": {
+					"title": "Maximum profitability",
+					"content": "Profit of up to 40% a month via generation of new coins (staking)",
+					"icon": "fast_icon"
+				},
+				"2": {
+					"title": "Secure and decentralized",
+					"content": "Blockchain technology ensures your security. The coin is independent of banks and politics.",
+					"icon": "safesecure_icon"
+				},
+				"3": {
+					"title": "Fast and profitable",
+					"content": "Transfers with no fees, in a matter of seconds. Transferring coins is as easy as texting in a messenger.",
+					"icon": "income_icon"
+				},
+				"4": {
+					"title": "Innovative",
+					"content": "Takes note of all deficiencies of existing cryptocurrencies and rectifies them.",
+					"icon": "innovate_icon"
+				}
+			},
+			"pzm": {
+				"1": {
+					"title": "Growing coins.",
+					"content": "Up to 10% a month via joint generating new coins (paramining)",
+					"icon": "multiply_icon"
+				},
+				"2": {
+					"title": "Secure and decentralized.",
+					"content": "Blockchain technology ensures your security. The coin is independent of banks and politics.",
+					"icon": "safesecure_icon"
+				},
+				"3": {
+					"title": "Convinient.",
+					"content": "PRIZM does not require powerful computers to be mined. Fast payments and minimum fees.",
+					"icon": "comfort_icon"
+				},
+				"4": {
+					"title": "Time proven.",
+					"content": "The coin has been around over 3 years and is used by people around the globe.",
+					"icon": "trusty_icon"
+				}
+			}
+		},
+		"join_roy": "Join <b>ROY Club</b> today and forge a better future tomorrow!",
+		"hello": "Hello and welcome!",
+		"roy_unites": "ROY Club unites people!",
+		"my_name": "I'm <b>{0}</b>, and I'll help you with registration in the ROY Club!",
+		"to_join": "To join the ROY Club, <b>click the icon of the social media platform</b> whose messenger you'd like to use to contact me.",
+		"chat_bot": "If the chatbot or somebody else in the chatroom will ask for a reference number or nickname, enter <b>{0}</b> or <b>{1}</b>.",
+		"bot_help": "The chatbot will help you handle the things which you may find unclear or too complicated, and will <b>inform me personally</b> in case anything goes wrong.",
+		"sign_up": "Sign up",
+		"no_messenger": "If there's no way to use a messenger,",
+		"use_form": "use the contact form.",
+		"your_name": "Your name",
+		"form": "Feedback form",
+		"your_email": "Your contact Email",
+		"phone_number": "Phone Number",
+		"comment": "Comment",
+		"input_comment": "Input your comment",
+		"name_valid": "Digits, letters, and spaces are allowed!",
+		"phone_valid": "Digits, characters (\"+\"), and brackets are allowed!",
+		"email_valid": "Email entered incorrectly",
+		"questions": "If you have any questions, you can contact me in one of these social networks:",
+		"thanks": "Thank you, i'll contact you shortly!",
+		"send": "Send",
+		"rights": "All rights reserved ROY Club"
+	},
+	"es": {
+		"roy_club": "ROY CLUB",
+		"welcome": "BIENVENIDOS<br>A <span>ROY CLUB!</span>",
+		"make_crypto": "Hacemos que la criptomoneda sea accesible para todos!",
+		"income_alt": {
+			"umi": "Hasta un 40% al mes en criptomoneda",
+			"pzm": "Hasta un 10% al mes en criptomoneda",
+			"all": "Hasta un 40% al mes en criptomoneda"
+		},
+		"income": {
+			"umi": "Hasta un 40% por mes en criptomonedas",
+			"pzm": "Hasta un 10% por mes en criptomonedas",
+			"all": "Hasta un 40% por mes en criptomonedas"
+		},
+		"learn": "Capacitación para los participantes",
+		"learn_alt": "Educación gratis",
+		"community": "Comunidad",
+		"is_people": "<span>ROY CLUB</span> — ES LA GENTE!",
+		"social_project": "Nosotros — somos un proyecto social, que une a las personas con la finalidad<br class=`is-hidden-mobile`> de garantizar una vida digna a sus familias, así como para ayudar a otras personas.",
+		"more_than": "Más de <span>350 000</span> participantes de todo el mundo",
+		"initiative": "Iniciativas sociales y de caridad",
+		"initiative_alt": "Proyectos sociales y de caridad",
+		"office": "Oficinas en más de <span>40 ciudades</span>",
+		"availability": "Disponibilidad",
+		"is_multi": "ROY CLUB — ES MULTIPLICACION DE CRIPTOMONEDAS",
+		"is_multi_alt": "Multiplicar criptomonedas sin salir de casa, en cualquier parte del mundo.",
+		"stay_home": "Sin salir de casa. En cualquier punto del mundo.",
+		"tech": "Tecnologias",
+		"is_crypto": "<span>ROY Club</span> es una criptomoneda",
+		"based_on": {
+			"umi": "La base del ROY Club es la criptomoneda UMI. Esta es una herramienta digital innovadora que permite extraer nuevas monedas sin equipos costosos. Se negocia en bolsas y se utiliza activamente para pagos.",
+			"pzm": "La base de ROY CLUB — criptomoneda PRIZM. Durante mucho tiempo ha sido utilizada por personas de todo el mundo y da la posibilidad de recibir nuevas monedas gracias a la tecnología paraminig. Para obtener las monedas no es necesario una computadora potente, y utilizar la criptomoneda es muy simple.",
+			"all": "La base de ROYCLUB — son las criptomonedas UMI y PRIZM. Estos son instrumentos digitales, los cuales combinan la posibilidad de recibir nuevas monedas sin costosos equipos de minería. Cada moneda tiene sus ventajas y particularidades."
+		},
+		"we_together": "ROY CLUB sustenta ambas monedas y ofrece a las personas la oportunidad de elegir que instrumento utilizar. Nos unimos para obtener el máximo beneficio de cada moneda y hacer que la criptomoneda sea accesible para todas las personas.",
+		"free_learn": "Gratuitamente capacitamos a todos los participantes y damos la oportunidad de multiplicar criptomonedas y recibir bonificaciones. Al mismo tiempo, las monedas se pueden retirar en cualquier momento sin restricciones!",
+		"free_learn_alt": "Formamos a los participantes de forma gratuita y les damos la oportunidad de mejorar su bienestar material. Al mismo tiempo, la criptomoneda se puede retirar en cualquier momento, ¡sin restricciones!",
+		"join": "Unirse",
+		"join_alt": "Ser criptoinversor",
+		"is_opportune": "<span>ROY CLUB</span> — ES OPORTUNIDAD!",
+		"school": "<b>ROY Escuela y Academia.</b> Programas de educación",
+		"helper": "<b>ROY Asistente.</b> Embudo de ventas gratuito.",
+		"move": "<b>ROY MOVIMIENTO.</b> Capacitación de formación de equipos",
+		"good": "<b>ROY Caridad.</b> Caridad de verdad.",
+		"auto": "<b>ROY AUTO.</b> Autos para los participantes activos.",
+		"sprint": "<b>ROY Sprint.</b> Pagos por etiquetar tu auto.",
+		"market": "<b>ROY Market.</b> Plataforma comercial con productos y servicios.",
+		"contests": "<b>Concursos, promociones, sorteos</b> y mucho más.",
+		"fast_facts": "Pocas palabras sobre lo esencial",
+		"is_multi_crypto": {
+			"pzm": "ROY CLUB — ES MULTIPLICACION DE PRIZM",
+			"umi": "ROY CLUB — ES MULTIPLICACION DE UMI",
+			"all": "ROY CLUB — ES MULTIPLICACION DE CRIPTOMONEDAS"
+		},
+		"roy_based": {
+			"pzm": "La base de oportunidad de ROY CLUB — el uso de la moneda PRIZM. Durante mucho tiempo ha sido utilizada por personas de todo el mundo y da la posibilidad de recibir nuevas monedas gracias a la tecnología paramining. Para obtener las monedas no es necesario una computadora potente, y utilizar la criptomoneda es muy simple.",
+			"umi": "La base de oportunidad de ROY CLUB — el uso de la moneda UMI. Es un instrumento digital innovador, el cual da la posibilidad de obtener nuevas monedas sin equipos costosos. Se la negocia en bolsa y se utiliza activamente para pagos.",
+			"all": "La base de oportunidad de ROY CLUB — el uso de las criptomonedas UMI y PRIZM. Estos son instrumentos digitales, los cuales combinan la posibilidad de recibir nuevas monedas sin costosos equipos de minería. Cada moneda tiene sus ventajas y particularidades."
+		},
+		"compare": {
+			"umi": {
+				"1": {
+					"title": "Crecimiento de la moneda",
+					"content": "Hasta un <span>40%</span> de nuevas monedas al mes, gracias a la tecnología del staking",
+					"icon": "fast_icon"
+				},
+				"2": {
+					"title": "Transferencias rápidas sin comisión",
+					"content": "Las transferencias son casi instantáneas, sin comisiones",
+					"icon": "income_icon"
+				},
+				"3": {
+					"title": "Innovaciones",
+					"content": "Toma en cuenta las desventajas de otras criptomendas y las resuelve. Instrumento monetario universal",
+					"icon": "innovate_icon"
+				},
+				"4": {
+					"title": "Descentralizada y segura",
+					"content": "Seguridad gracias a la tecnología blockchain. Independencia de la moneda de los bancos y la política",
+					"icon": "safesecure_icon"
+				},
+				"button": "Aumentar UMI"
+			},
+			"pzm": {
+				"1": {
+					"title": "Crecimiento de la moneda",
+					"content": "Hasta un <span>10%</span> de nuevas monedas al mes, gracias a la tecnología del paramining",
+					"icon": "multiply_icon"
+				},
+				"2": {
+					"title": "Comisiones mínimas",
+					"content": "Las comisiones por transferencias son más bajas que en muchas criptomonedas.",
+					"icon": "comfort_icon"
+				},
+				"3": {
+					"title": "Comprobada con el tiempo",
+					"content": "Existe más de <span>tres años</span> y es utilizada por personas de todo el mundo.",
+					"icon": "trusty_icon"
+				},
+				"4": {
+					"title": "Descentralizada y segura",
+					"content": "Seguridad gracias a la tecnología blockchain. Independencia de la moneda de los bancos y la política",
+					"icon": "safesecure_icon"
+				},
+				"button": "Aumentar PRIZM"
+			}
+		},
+		"advantages": {
+			"umi": {
+				"1": {
+					"title": "La más alta rentabilidad",
+					"content": "Hasta un 40% al mes gracias a la generación de nuevas monedas (staking)",
+					"icon": "fast_icon"
+				},
+				"2": {
+					"title": "Segura y descentralizada",
+					"content": "Seguridad gracias a la tecnología blockchain. Independencia de la moneda de los bancos y la política.",
+					"icon": "safesecure_icon"
+				},
+				"3": {
+					"title": "Conveniente y Rápida",
+					"content": "Transacciones sin comisión, en segundos. Enviar monedas no es más difícil, que enviar un mensaje en el messenger.",
+					"icon": "income_icon"
+				},
+				"4": {
+					"title": "Innovadora",
+					"content": "Toma en cuenta las desventajas de otras criptomendas y las resuelve",
+					"icon": "innovate_icon"
+				}
+			},
+			"pzm": {
+				"1": {
+					"title": "Crecimiento de la moneda",
+					"content": "Hasta un 10% mensual, gracias a la minería conjunta de las nuevas monedas (paramining)",
+					"icon": "multiply_icon"
+				},
+				"2": {
+					"title": "Segura y descentralizada",
+					"content": "Seguridad gracias a la tecnología blockchain. Independencia de la moneda de los bancos y la política.",
+					"icon": "safesecure_icon"
+				},
+				"3": {
+					"title": "Conveniente",
+					"content": "Para obtener nuevas monedas PRIZM, no es necesario una computadora potente. Pagos rápidos en el sistema y comisiones mínimas.",
+					"icon": "comfort_icon"
+				},
+				"4": {
+					"title": "Comprobada con el tiempo",
+					"content": "La moneda existe más de 3 años y es utilizada por personas de todo el mundo",
+					"icon": "trusty_icon"
+				}
+			}
+		},
+		"join_roy": "Únete a <b>ROY CLUB</b> Hoy Y crea un futuro mejor para mañana!",
+		"hello": "¡Bienvenidos!",
+		"my_name": "¡Mi nombre es <b>{0}</b> y te ayudaré a unirte al ROY Club!",
+		"to_join": "Para registrarte en el ROY Club, elige uno de <b>los messengers de redes sociales</b> más conveniente para que me envíes tus comentarios.",
+		"chat_bot": "Si el Chatbot u otra persona te pregunta el número de referencia o el nickname, ingresa <b>{0}</b> o <b>{1}</b>.",
+		"bot_help": "El chat bot te explicará todos los momentos complejos o difíciles de entender y en casos extremos <b>me informará personalmente</b> si algo sale mal.",
+		"sign_up": "Registro",
+		"no_messenger": "Si no puedes usar el messenger,",
+		"use_form": "usa el formulario para enviar comentarios.",
+		"your_name": "¿Cómo te llamas?",
+		"phone_number": "Número de teléfono",
+		"comment": "Comentario",
+		"name_valid": "¡Se permiten números, letras y dejar un espacio!",
+		"phone_valid": "¡Números permitidos, carácter “+”y paréntesis!",
+		"email_valid": "Correo electrónico ingresado incorrectamente",
+		"questions": "Si tienes alguna duda, puedes contactarme en una de estas redes sociales:",
+		"thanks": "Gracias, ¡me pondré en contacto contigo muy pronto!",
+		"send": "Enviar",
+		"form": "Formulario de comentarios",
+		"your_email": "Tu correo electrónico de contacto",
+		"input_comment": "Ingrese su comentario",
+		"rights": "Todos los derechos reservados ROY Club"
+	}
+}

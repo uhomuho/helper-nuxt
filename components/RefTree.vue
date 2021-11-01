@@ -51,9 +51,10 @@
 				)
 					strong.name.is-size-6 {{ getName(props.row.info) }}
 				strong.name.is-size-6( v-else-if='props.row.info' ) {{ getName(props.row.info) }}
-				| {{ props.row.wallet }}
+				br
+				span {{ props.row.wallet.length > 40 ? props.row.wallet.slice(0, 15) + '.....' + props.row.wallet.slice(-15) : props.row.wallet }}
 				a
-					Copy( :link='props.row.wallet' :onlyIcon='true' )
+					Copy( :link='props.row.wallet' onlyIcon isSmall inline )
 
 		b-table-column.balance-column(
 			field="balance"
@@ -62,7 +63,7 @@
 			:width="columns['balance'].width"
 			numeric
 			sortable
-			v-slot='props') {{ props.row.balance }} PZM
+			v-slot='props') {{ props.row.balance }} {{ crypto == "pzm" ? "PZM" : "UMI" }}
 
 		b-table-column.contacts(
 			field="info"
@@ -145,6 +146,7 @@
 				td.inner( colspan="8" )
 					RefTree(
 						ref="subtable"
+						:crypto='crypto'
 						:leader_id='leader_id'
 						:data='props.row.childrens'
 						:columns='columns'
@@ -158,16 +160,16 @@
 				.content.has-text-centered
 					a( @click="refresh" )
 						b-icon(icon="refresh" size="is-large")
-					p(v-translate)
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters, mapActions, mapState } from 'vuex'
 
 export default {
 	name: "Tree",
 	computed: {
 		...mapGetters('contacts', ['fromContacts']),
+		...mapState('leader', ['leader']),
 		sorting () {
 			return {
 				'field': this.sortField,
@@ -183,6 +185,7 @@ export default {
 		}
 	},
 	props: {
+		crypto: String,
 		leader_id: {
 			type: String,
 			default: ''
@@ -243,12 +246,12 @@ export default {
 				}
 			}
 
-			const fromClub = await leaders.getInfo({ address: contact.wallet })
+			const fromClub = await this.$getInfo({ address: contact.wallet })
 
-			if (fromClub.data) {
+			if (fromClub) {
 				newContact.roy = {
-					address: fromClub.data.invest_wallet,
-					publicKey: fromClub.data.invest_pub_key
+					address: fromClub.invest_wallet,
+					publicKey: fromClub.invest_pub_key
 				}
 			}
 
@@ -261,12 +264,12 @@ export default {
 				if (contact.info.sigen && contact.info.sigen.address) { newContact.sigen = contact.info.sigen }
 			}
 
-			return contacts.addContact(newContact)
+			return this.$createContact(newContact)
 				.then((r) => {
 					contact.info = r.data
-					this.getContacts()
+					this.getContacts(this.leader._id)
 					this.$buefy.snackbar.open({
-						message: this.$translate.text('Contact added'),
+						message: this.$t('contact_added'),
 						queue: false
 					})
 				})
@@ -274,14 +277,6 @@ export default {
 					console.log(e)
 					this.isLoading = false
 				})
-		},
-		onCopy (e) {
-			this.$buefy.snackbar.open({
-				message: this.$translate.text('Copied') + ' ' + e.text + '!',
-				queue: false,
-				type: "is-danger",
-				actionText: this.t("Close")
-			})
 		},
 		getName (contact) {
 			if (contact) {
@@ -292,8 +287,6 @@ export default {
 		},
 		onSort (field, order, event) {
 			this.$emit('onSort', field, order, this.$refs.table)
-			/* if(this,$refs.subtable)
-				this.$refs.subtable.initSort(row) */
 		},
 		closeAllOtherDetails (row, index) {
 			this.defaultOpenedDetails = [row.id]

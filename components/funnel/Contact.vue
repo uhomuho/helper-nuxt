@@ -4,6 +4,8 @@
 		.media-content
 			.is-pulled-right( v-if='type !== "table-cell"' )
 				b-icon.move( icon="cursor-move" custom-size="default" )
+				span( @click='remove' )
+					b-icon.remove( icon="trash-can" custom-size="default" type="is-danger" )
 			nuxt-link.name( v-if='contact.leader_id' :to='`/contact/${contact._id}`' ) {{ contact.name ? contact.name : (contact.username ? contact.username : 'Безымянный') }}
 
 			.date( v-if='contact.updatedAt && type !== "table-cell"' ) {{ moment(contact.updatedAt).locale(locale).calendar() }}
@@ -22,32 +24,32 @@
 				a( v-if='contact.socials && whatsapp', target="_blank", :href="'https://api.whatsapp.com/send?phone=' + whatsapp" )
 					b-icon( icon="whatsapp", custom-size="default" )
 
-			.wallets( v-if='contact.sigen && (contact.sigen.address || contact.sigen.umiAddress) && type !== "table-cell"' )
-				span.smaller( v-if='contact.sigen.address || contact.sigen.umiAddress' ) Sigen:
+			.wallets( v-if='contact.sigen && contact.sigen.umiAddress && type !== "table-cell"' )
+				span.smaller( v-if='contact.sigen.umiAddress' ) Sigen:
 
-				Copy.smaller( v-if='contact.sigen.address' :link='contact.sigen.address' :copyText='$t("funnel.contact.pzm_address")' :hasLink='false' inline )
-				span.smaller( v-if='contact.sigen.address' ) |
+				//- Copy.smaller( v-if='contact.sigen.address' :link='contact.sigen.address' :copyText='$t("funnel.contact.pzm_address")' :hasLink='false' inline )
+				//- span.smaller( v-if='contact.sigen.address' ) |
 
-				Copy.smaller( v-if='contact.sigen.publicKey' :link='contact.sigen.publicKey' :copyText='$t("funnel.contact.pzm_key")' :hasLink='false' inline )
-				span.smaller( v-if='contact.sigen.publicKey' ) |
+				//- Copy.smaller( v-if='contact.sigen.publicKey' :link='contact.sigen.publicKey' :copyText='$t("funnel.contact.pzm_key")' :hasLink='false' inline )
+				//- span.smaller( v-if='contact.sigen.publicKey' ) |
 
 				Copy.smaller( v-if='contact.sigen.umiAddress' :link='contact.sigen.umiAddress' :copyText='$t("funnel.contact.umi_address")' :hasLink='false' inline )
 				
-			.wallets( v-if="contact.roy && (contact.roy.address || contact.roy.umiAddress)" )
-				span.smaller( v-if='contact.roy.address || contact.roy.umiAddress' ) Roy:
+			.wallets( v-if="contact.roy && contact.roy.umiAddress" )
+				span.smaller( v-if='contact.roy.umiAddress' ) Roy:
 
-				Copy.smaller( v-if='contact.roy.address' :link='contact.roy.address' :copyText='$t("funnel.contact.address")' :hasLink='false' inline )
-				span.smaller( v-if='contact.roy.address' ) |
+				//- Copy.smaller( v-if='contact.roy.address' :link='contact.roy.address' :copyText='$t("funnel.contact.address")' :hasLink='false' inline )
+				//- span.smaller( v-if='contact.roy.address' ) |
 
-				Copy.smaller( v-if='contact.roy.publicKey' :link='contact.roy.publicKey' :copyText='$t("funnel.contact.key")' :hasLink='false' inline )
-				span.smaller( v-if='contact.roy.publicKey' ) |
+				//- Copy.smaller( v-if='contact.roy.publicKey' :link='contact.roy.publicKey' :copyText='$t("funnel.contact.key")' :hasLink='false' inline )
+				//- span.smaller( v-if='contact.roy.publicKey' ) |
 
 				Copy.smaller( v-if='contact.roy.umiAddress' :link='contact.roy.umiAddress' :copyText='$t("funnel.contact.umi_address")'  :hasLink='false' inline )
 </template>
 
 <script>
 import moment from 'moment'
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
 	name: "FunnelContact",
@@ -70,10 +72,15 @@ export default {
     }
   },
 	methods: {
+		...mapActions('contacts', ['deleteContact']),
 		normalize (phone) {
       if (phone) { return phone.trim().replace(/\D/g, '').replace(/^7/, '+7').replace(/^8/, '+7') }
       return null
-    }
+    },
+		remove() {
+			console.log('xex')
+			this.deleteContact(this.contact._id)
+		}
 	}
 }
 </script>
@@ -82,6 +89,8 @@ export default {
 .contact {
 	background: #fff;
 	padding: 1rem;
+	box-shadow: 0px 1px 3px 0 rgb(0 0 0 / 20%);
+	border-radius: 4px;
 	&.cell {
 		padding: 0;
 		.icons {
@@ -99,6 +108,15 @@ export default {
 <style scoped>
 .move {
 	cursor: grabbing;
+}
+.remove {
+	cursor: pointer;
+}
+.icons {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0 .25rem;
 }
 .icons .icon {
 	width: 16.5%;

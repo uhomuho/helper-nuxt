@@ -9,6 +9,13 @@
 			#top_line( v-if='$route.name !== "login"' )
 				h1 {{ $t(`title.${$route.name}`, titleParams) }}
 			.section
+				client-only
+					Notification.is-danger( from="disable_prizm" )
+						div
+							p
+								b( v-html='$t("disable_pzm", [leader.username])' )
+							.buttons.mt-2
+								a.button.is-small.is-warning( href='https://t.me/roy_club_news_ru/5954' target="_blank" ) {{ $t("get_more") }}
 				nuxt
 	main.hero.is-fullheight( v-else )
 		Auth

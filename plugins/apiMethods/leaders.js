@@ -35,8 +35,23 @@ export default ({ $axios, $createChart }, inject) => {
 			})
 	})
 
+	inject('getLeader', username => {
+		return $axios.get(`/leaders/${username}`)
+			.then(res => res.data)
+	})
+
 	inject('getReferrals', params => {
-		return $axios.post('referrals/' + params.id, params)
+		if (params.crypto == "pzm") {
+			return $axios.post(`/referrals/${params.id}`, params)
+				.then(res => res.data)
+		} else if (params.crypto == "umi") {
+			return $axios.get(`/referrals/${params.id}?depth=${params.depth}`)
+				.then(res => res.data)
+		}
+	})
+
+	inject('getInfo', params => {
+		return $axios.post('/getInfoByAddress', params)
 			.then(res => res.data)
 	})
 }

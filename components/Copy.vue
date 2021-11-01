@@ -6,6 +6,7 @@ p( :class='{ flex: flex, "is-inline": inline }' )
 	b-icon.copy( 
 		v-if='!copyText'
 		icon="content-copy"
+		:size='isSmall ? "is-small" : "is-medium"'
 		v-clipboard:copy='link'
 		v-clipboard:success='$onCopy' )
 	br( v-if='!onlyIcon' )
@@ -24,6 +25,10 @@ export default {
 			default: false
 		},
 		hasLink: {
+			type: Boolean,
+			default: true
+		},
+		isSmall: {
 			type: Boolean,
 			default: true
 		},

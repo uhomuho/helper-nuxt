@@ -13,7 +13,7 @@
 						type='input'
 						size='is-small'
 						:placeholder='$t("profile.videos.url")'
-						v-model='id'
+						v-model='videos[i].id'
 						@change.native='checkYoutube'
 						@keyup.native='checkYoutube')
 				b-field(
@@ -23,7 +23,7 @@
 						type='input'
 						size='is-small'
 						:placeholder='$t("profile.videos.title")'
-						v-model='title'
+						v-model='videos[i].title'
 					)
 				b-field(
 					:message='description && !validDescription(description) ? $t("profile.videos.description.valid") : null'
@@ -34,7 +34,7 @@
 						rows="3"
 						maxlength="150"
 						:placeholder='$t("profile.videos.description")',
-						v-model='description')
+						v-model='videos[i].description')
 				hr
 				button.button.is-info( :class="{ 'is-loading': loading }" ) {{ $t('save') }}
 	.tile.is-parent.is-6( v-if='videos.length < 2' )
@@ -57,7 +57,7 @@ export default {
 	data() {
 		return {
 			loading: false,
-			defaultVideos:[
+			defaultVideos: [
 				{
 					index: 0,
 					id: 'puFK04UF6ak',

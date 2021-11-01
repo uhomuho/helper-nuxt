@@ -24,6 +24,9 @@ export default {
 			}
 			if (loading) this.show = true
 		}
+	},
+	mounted() {
+		this.show = this.loading
 	}
 }
 </script>

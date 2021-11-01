@@ -5,10 +5,10 @@ Card( :title='$t("profile.settings.title")' icon="account" )
 			:leader='leader'
 			@update='update' )
 		hr
-		ProfilePzm( 
+		//- ProfilePzm( 
 			:leader='leader'
 			@update='update' )
-		hr
+		//- hr
 		b-field( :label='$t("profile.settings.y_metric")' )
 			b-input(
 				type="textarea"
@@ -19,7 +19,7 @@ Card( :title='$t("profile.settings.title")' icon="account" )
 		hr
 		b-field(
 			:label='$t("profile.settings.design_title")')
-		.content
+		//- .content
 			p {{ $t("profile.settings.design_desc") }}
 		b-field
 			b-select( 
@@ -55,11 +55,11 @@ export default {
         {
           id: 1,
           name: this.$t('profile.settings.designs.2')
-        }
-        /* {
+        },
+        {
           id: 2,
-          name: 'Универсальный'
-        } */
+          name: this.$t('profile.settings.designs.3')
+        }
       ]
 		} 
 	},
@@ -70,6 +70,7 @@ export default {
 		...mapActions('leader', ['save']),
 		update() {
 			if (!this.validUmi || !this.validPzm) return this.$Snackbar( this.$t("profile.not_all") )
+			if (this.name && this.name.trim().length == 0) return this.$Snackbar( this.$t("profile.spaces") )
 			this.loading = true
 			this.save({ leader: this.leader, snackbar: true })
 				.then(() => this.loading = false)

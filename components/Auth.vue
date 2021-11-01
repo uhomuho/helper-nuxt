@@ -29,6 +29,8 @@
 						type='password'
 						autocomplete='on'
 						password-reveal)
+				b-field
+					a( href='//t.me/roy_helper_notify_bot?start=resetPassword' target="_blank") {{ $t("forgot_pwd") }}
 				hr.my-4
 				b-field( grouped )
 					.control
@@ -77,7 +79,7 @@ import { mapActions, mapState } from 'vuex'
 
 const usernameReg = new RegExp(/^(?!.*umi.*$)(?!.*pzm.*$)[A-Za-z0-9-_]{1,32}$/),
 			passwordReg = new RegExp(/(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*()_+]{6,32}/),
-			telegramReg = new RegExp(/^[a-z][a-z0-9]{4,32}?([_][a-z0-9]+){0,2}$/i)
+			telegramReg = new RegExp(/^[a-zA-Z0-9-_@]{5,32}$/igm)
 
 export default {
 	name: "Auth",
@@ -122,6 +124,8 @@ export default {
 			if (!this.validUsername || !this.validPassword || !this.validTelegram) return
 			
 			this.loading = true
+
+			this.register.lang = this.$i18n.localeProperties.code
 			this.reg(this.register)
 				.then(res => {
 					this.result(res)

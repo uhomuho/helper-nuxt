@@ -3,10 +3,11 @@
 	client-only
 		Notification.is-warning( from='funnel' )
 			div( v-html='$t("funnel.noti")' )
-	b-field( grouped )
+	//- b-field( grouped )
 		b-switch( :value='umi' @input='set({ field: "umi", value: $event })' ) UMI
 		b-switch( :value='pzm' @input='set({ field: "pzm", value: $event })' ) PZM
-	FunnelBoard( :contacts='funnelContacts' )
+	PageLoad( v-if='$fetchState.pending' )
+	FunnelBoard( v-if='!$fetchState.pending' :contacts='funnelContacts' )
 </template>
 
 <script>
@@ -14,7 +15,8 @@ import { mapState, mapGetters, mapMutations } from 'vuex'
 
 export default {
 	name: "Funnel",
-	async fetch({ store }) {
+	async fetch() {
+		let { store } = this.$nuxt.context
 		let { leader } = store.state.leader
 		await store.dispatch('contacts/getContacts', leader._id)
 	},

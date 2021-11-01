@@ -37,6 +37,7 @@ export default {
 					label: 'referrals',
 					items: [
 						{ icon: 'nuxt', to: '/funnel', name: 'funnel' },
+						{ icon: 'telegram', to: '/bots', name: 'bots' },
 						{ icon: 'contact-mail', to: '/form', name: 'form' },
 						{ icon: 'account-plus', to: '/contact/new', name: 'add' },
 						{ icon: 'file-tree', to: '/tree', name: 'tree' }
@@ -45,8 +46,8 @@ export default {
 				{
 					label: 'info',
 					items: [
-						{ icon: 'wallet', to: 'https://roy.cash/pzmwallet', name: 'wallet', external: true },
-						{ icon: 'link', to: 'https://roy.cash/blockchain', name: 'blockchain', external: true },
+						{ icon: 'wallet', to: 'https://roy.top/pzmwallet', name: 'wallet', external: true },
+						{ icon: 'link', to: 'https://roy.top/blockchain', name: 'blockchain', external: true },
 						{ icon: 'robot', to: 'https://t.me/roysupport', name: 'tech_support', external: true },
 					]
 				}

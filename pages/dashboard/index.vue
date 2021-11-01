@@ -1,11 +1,12 @@
 <template lang="pug">
 #dashboard
-	tiles
+	PageLoad( v-if='$fetchState.pending' )
+	tiles( v-if='!$fetchState.pending' )
 		card-widget.tile.is-child( type="is-primary", icon="account-arrow-right", :number="referrals", :label='$t("dash.invited")' )
 		card-widget.tile.is-child( type="is-info", icon="account-multiple", :number="clubmembers", :label='$t("dash.in_club")' )
 		card-widget.tile.is-child( type="is-success", icon="chart-timeline-variant", :number="roi", suffix="%", label="KOI", :tooltip='$t("dash.koi_tooltip")' )
 	CardComponent(
-		v-if="chartData && chartData.chartData"
+		v-if='!$fetchState.pending && chartData && chartData.chartData'
 		:title="$t('chart.events')" 
 		icon="finance"
 		@header-icon-click="fillChartData"
@@ -27,15 +28,18 @@ export default {
 	data() {
 		return {
 			chart: {},
-			history: null
+			history: null,
+			contacts: null,
+			contactsGrouped: null
 		}
 	},
-	async asyncData({ $getContacts, store }) {
+	async fetch() {
+		let { $getContacts, store } = this.$nuxt.context
 		let leader = store.state.leader.leader 
 		if (leader) {
 			let { contacts, contactsGrouped } = await $getContacts(leader._id)
-
-			return { contacts, contactsGrouped }
+			this.contacts = contacts
+			this.contactsGrouped = contactsGrouped
 		}
 	},
 	computed: {
@@ -62,28 +66,31 @@ export default {
 	},
 	methods: {
 		fillChartData() {
-			this.$getContacts(this.leader._id)
-				.then(({ contacts, contactsGrouped }) => {
-					this.contacts = contacts
-					this.contactsGrouped = contactsGrouped
-					this.$getHistory(this.leader._id)
-						.then(({ chart, history }) => {
-							this.chart = chart
-							this.history = history
-						})
-				})
+			if (this.leader) {
+				this.$getContacts(this.leader._id)
+					.then(({ contacts, contactsGrouped }) => {
+						this.contacts = contacts
+						this.contactsGrouped = contactsGrouped
+						this.$getHistory(this.leader._id)
+							.then(({ chart, history }) => {
+								this.chart = chart
+								this.history = history
+							})
+					})
+			}
 		}
 	},
 	mounted() {
-		this.$i18n.onLanguageSwitched = () => {
-			let { chart } = this.$createChart(this.history)
-			this.chart = chart
+		if (this.leader && this.leader._id) {
+			this.$i18n.onLanguageSwitched = () => {
+				this.fillChartData()
+			}
+			this.$getHistory(this.leader._id)
+				.then(({ chart, history }) => {
+					this.chart = chart
+					this.history = history
+				})
 		}
-		this.$getHistory(this.leader._id)
-			.then(({ chart, history }) => {
-				this.chart = chart
-				this.history = history
-			})
 	}
 }
 </script>

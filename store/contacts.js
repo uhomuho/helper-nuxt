@@ -11,13 +11,13 @@ const $groupBy = (xs, key, type = {}) => {
 export const state = () => ({
 	contacts: null,
 	umi: true,
-	pzm: true
+	pzm: false
 })
 
 export const getters = {
 	contacts: state => state.contacts,
 	contactsGrouped: state => $groupBy(state.contacts, 'stage'),
-	formContacts: state => state.contacts ? state.contacts.filter(contact => contact.stage == "-1") : [],
+	formContacts: state => state.contacts ? state.contacts.filter(contact => contact.stage == "-1" && (contact.bot == 'umi' || !contact.bot)) : [],
 	fromContacts: (state) => (wallet) => {
 		const contact = state.contacts ? state.contacts.find(obj => obj.sigen.address == wallet) : []
 		if (contact) { return contact._id }

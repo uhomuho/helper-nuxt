@@ -13,13 +13,13 @@
 					v-if='depth > 3' from="depth")
 					strong {{ $t("tree.noti.depth") }}
 			b-field( grouped group-multiline )
-				div.control.is-size-7( 
+				.control( 
 					v-for='(column, i) in columns' 
 					:key='i' 
 					v-if='column.inFilters' )
 					b-checkbox-button( v-model='column.display' type="is-dark")
 						span {{ column.title }}
-				div.control.is-size-7
+				.control
 					b-field(
 						:label='$t("tree.depth")'
 						label-position="on-border")
@@ -30,6 +30,11 @@
 							min="2"
 							max="9"
 							style="min-width: 100px")
+				//- .control
+					b-select(
+						v-model='crypto')
+						option(  v-if='leader.verified && leader.ref' value="pzm" ) PRIZM
+						option( v-if='leader.umiVerified && leader.umiRef' value="umi" ) UMI
 				.control.is-pulled-right
 					b-button.is-info(
 						:title='$t("tree.refresh")'
@@ -38,9 +43,10 @@
 						| {{ $t("tree.refresh") }}
 			RefTree(
 				:leader_id='leader._id'
+				:crypto='crypto'
 				:data='referrals'
 				:columns='columns'
-				:loading='loading'
+				:loading='$fetchState.pending ? true : loading'
 				:sortField='sortField'
 				:sortOrder='sortOrder'
 				@onSort='onSort'
@@ -61,16 +67,31 @@ export default {
 			depth: 2,
 			sortField: 'balance',
 			sortOrder: 'desc',
-			loading: false
+			loading: false,
+			crypto: 'umi',
+			referrals: []
 		}
 	},
-	async asyncData({ $getReferrals, store }) {
+	async fetch() {
+		let { $getReferrals, store } = this.$nuxt.context
+
 		let leader = store.state.leader.leader
-		if (!leader.ref) return { referrals: [] }
+		if (!leader.ref && !leader.umiRef) return this.referrals = []
 
-		let referrals = await $getReferrals({ id: leader.ref, depth: 2 })
-
-		return { referrals }
+		if (leader.umiVerified && leader.umiRef) {
+			this.crypto = 'umi'
+			this.referrals = await $getReferrals({ id: leader.umiRef, depth: 2, crypto: 'umi' })
+		} else if (leader.verified && leader.ref) {
+			this.crypto = 'pzm'
+			this.referrals = await $getReferrals({ id: leader.ref, depth: 2, crypto: 'pzm' })
+		} else {
+			this.referrals = []
+		}
+	},
+	watch: {
+		crypto() {
+			this.refresh()
+		}
 	},
 	computed: {
 		...mapState('leader', ['leader']),
@@ -89,8 +110,19 @@ export default {
 		refresh() {
 			if (this.leader.ref) {
 				this.loading = true
-				this.$getReferrals({ id: this.leader.ref, depth: this.depth })
-					.then(referrals => this.referrals = referrals)
+				if (this.crypto == "pzm") {
+					this.$getReferrals({ id: this.leader.ref, depth: this.depth, crypto: 'pzm' })
+						.then(referrals => {
+							this.referrals = referrals
+							this.loading = false
+						})
+				} else {
+					this.$getReferrals({ id: this.leader.umiRef, depth: this.depth, crypto: 'umi' })
+						.then(referrals => {
+							this.referrals = referrals
+							this.loading = false
+						})
+				}
 			}
 		},
 		onSort (field, order) {

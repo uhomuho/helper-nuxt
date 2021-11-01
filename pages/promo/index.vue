@@ -4,11 +4,15 @@
 		Notification.is-danger( v-if='!leader.chat_id' )
 			div
 				b( v-html='$t("noti.noti_bot", [leader.username])' )
-	Card(
-		v-if='(leader.bot === "pzm" && leader.ref) || (leader.bot === "umi" && leader.umiRef)'
+	//- Card(
+		v-if='(leader.ref && leader.verified) || (leader.umiRef && leader.umiVerified)'
 		:title='$t("promo.title")'
 		icon="cash")
-		b-field
+	Card(
+		v-if='(leader.ref && leader.verified) || (leader.umiRef && leader.umiVerified)'
+		:title='$t("promo.what_use")'
+		icon="cash")
+		//- b-field
 			b-select(
 				v-model='leader.bot'
 				@input='update'
@@ -19,8 +23,9 @@
 				option(
 					v-if='leader.umiVerified'
 					value="umi" ) UMI
-		hr
-		b-field( :label='$t("promo.what_use")' )
+		//- hr
+		//- b-field( :label='$t("promo.what_use")' )
+		b-field
 			.content
 				p( v-html='$t("promo.form")' )
 				p( v-html='$t("promo.bot")' )
@@ -31,7 +36,7 @@
 				v-model='leader.mode'
 				@input='update'
 				:placeholder='$t("promo.choose.mode")')
-				option( value="form" ) {{ $t("promo.opts.form") }}
+				option( value="welcome" ) {{ $t("promo.opts.form") }}
 				option( value="bots" ) {{ $t("promo.opts.bot") }}
 		.content( v-if='leader.mode == "bots"' )
 			Copy( :text='$t("promo.link.bot")' :link='`https://${host}/${leader.username}/welcome`' )
@@ -54,16 +59,18 @@
 			Copy( v-if='leader.umiRef && leader.bot == "umi"' :link='`https://${host}/umi${leader.umiRef}/bot`' :hasLink='false' flex )
 			Copy( v-if='leader.ref && leader.bot == "pzm"' :link='`https://${host}/pzm${leader.ref}/bot`' :hasLink='false' flex )
 
-		hr
-		b-field( :label='$t("promo.label.diff_crypto")' )
+		//- hr
+		//- b-field( :label='$t("promo.label.diff_crypto")' )
 			p {{ $t("promo.label.which_show") }}
-		b-field( v-if='leader.umiVerified && leader.umiRef' label="UMI" horizontal )
+		//- b-field( v-if='leader.umiVerified && leader.umiRef' label="UMI" horizontal )
 			Copy( :link='`https://${host}/umi${leader.umiRef}`' :hasLink='false' flex )
 			Copy( :link='`https://${host}/${leader.username}/umi`' :hasLink='false' flex )
-		b-field( v-if='leader.verified && leader.ref' label="PRIZM" horizontal )
+			Copy( :link='`https://${host}/${leader.username}/welcome/umi`' :hasLink='false' flex )
+		//- b-field( v-if='leader.verified && leader.ref' label="PRIZM" horizontal )
 			Copy( :link='`https://${host}/pzm${leader.ref}`' :hasLink='false' flex )
 			Copy( :link='`https://${host}/${leader.username}/pzm`' :hasLink='false' flex )
-		b-field( horizontal )
+			Copy( :link='`https://${host}/${leader.username}/welcome/pzm`' :hasLink='false' flex )
+		//- b-field( horizontal )
 			template( slot="label" )
 				|{{ $t("promo.label.all") }}
 				b-tooltip(
@@ -139,6 +146,10 @@ export default {
 			this.save({ leader: this.leader, snackbar: true })
 				.then(() => this.loading = false)
 		}
+	},
+	mounted() {
+		this.leader.bot = this.leader.umiVerified && this.leader.verified ? this.leader.bot : this.leader.verified ? "pzm" : this.leader.umiVerified ? "umi" : this.leader.bot
+		this.save({ leader: this.leader, snackbar: false })
 	}
 }
 </script>

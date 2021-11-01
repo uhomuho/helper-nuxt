@@ -1,7 +1,7 @@
 <template lang="pug">
 .notification(v-if='!clicked')
 	.is-pulled-right( v-if='from' )
-		button.button.is-small.is-white(type='button' @click='dismiss') {{ $t("noti.gotit") }}
+		button.button.is-small.is-white( type='button' @click='dismiss' ) {{ $t("noti.gotit") }}
 	slot
 </template>
 

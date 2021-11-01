@@ -77,6 +77,11 @@
 	.navbar-item {
 		cursor: pointer;
 		font-weight: bold;
+		&.lang {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 	.navbar-start {
 		.navbar-item {
@@ -154,7 +159,7 @@
 }
 
 .hero-head+.hero {
-	margin-top: 53px;
+	margin-top: 6.5rem;
 }
 .section-1 .column-container {
 	position: relative;
@@ -217,7 +222,7 @@
 	font-size: 0.75rem;
 	color: #73DFE7;
 }
-.section-3 span b {
+.section-3 span::v-deep b {
 	font-size: 2rem;
 	font-weight: normal;
 }
@@ -361,6 +366,7 @@
 	}
 	nav.navbar .navbar-menu.is-active {
 		display: flex;
+		position: absolute;
 	}
 	nav.navbar .navbar-menu .wrapper.is-flex {
 		flex-direction: column;

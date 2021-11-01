@@ -5,16 +5,20 @@
   "scripts": {
     "dev": "PORT=9003 nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "start": "nuxt start -p 8088",
+    "generate": "nuxt generate",
+    "prod": "npm run build && rm *.tar && tar -cf helpet-nuxt.tar --exclude='node_modules' --exclude='.env' . && caprover deploy -t helpet-nuxt.tar -n ROYClub -a helper-nuxt"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg-sprite": "^0.5.2",
     "chart.js": "^2.9.4",
     "cookie-universal-nuxt": "^2.1.4",
     "core-js": "^3.9.1",
+    "is-https": "^3.0.2",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "node-sass": "^5.0.0",
@@ -22,6 +26,7 @@
     "nuxt": "^2.15.3",
     "nuxt-buefy": "^0.4.4",
     "nuxt-i18n": "^6.22.3",
+    "nuxt-lazy-load": "^1.2.6",
     "nuxtjs-mdi-font": "^1.0.2",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
@@ -29,6 +34,12 @@
     "sass-loader": "^10.1.1",
     "vue-chartjs": "^3.5.1",
     "vue-clipboard2": "^0.3.1",
+    "vue-drag-drop": "^1.1.4",
+    "vue-server-renderer": "^2.6.12",
+    "vue-template-compiler": "^2.6.12",
+    "vue-slick": "^1.1.16",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-youtube-embed": "^2.2.2",
     "vuedraggable": "^2.24.3"
   },
   "devDependencies": {}
